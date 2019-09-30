@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!-- New XML document created with EditiX XML Editor (http://www.editix.com) at Mon Sep 30 11:02:40 EEST 2019 -->
+
+
+<restoranu-tinklas>
+	<restoranas virtuve="rytietiska">
+		<pavadinimas>Bambuchong</pavadinimas>
+		<darbuotoju-skaicius>58</darbuotoju-skaicius>
+		<vidutinis-atlyginimas valiuta="eur">756.8</vidutinis-atlyginimas>
+		<ikurtas>2008-10-03</ikurtas>
+		<vadovas lytis="v">
+			<vardas>Petras</vardas>
+			<pavarde>Malionis</pavarde>
+			<gimimo-data>1972-07-13</gimimo-data>
+		</vadovas>
+	</restoranas>
+	
+	<restoranas virtuve="vakarietiska">
+		<pavadinimas>Rofl Burger</pavadinimas>
+		<darbuotoju-skaicius>7</darbuotoju-skaicius>
+		<vidutinis-atlyginimas valiuta="eur">856.2</vidutinis-atlyginimas>
+		<ikurtas>2011-01-07</ikurtas>
+		<vadovas lytis="m">
+			<vardas>Marija</vardas>
+			<pavarde>Barkienė</pavarde>
+			<gimimo-data>1977-06-12</gimimo-data>
+		</vadovas>
+	</restoranas>
+</restoranu-tinklas>
