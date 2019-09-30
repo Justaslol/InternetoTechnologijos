@@ -1,0 +1,82 @@
+﻿[
+  {
+    "@virtuve": "rytietiska",
+    "pavadinimas": "Bambuchong",
+    "darbuotoju-skaicius": "58",
+    "vidutinis-atlyginimas": {
+      "@valiuta": "eur",
+      "#text": "756.8"
+    },
+    "ikurtas": "2008-10-03",
+    "vadovas": {
+      "@lytis": "v",
+      "vardas": "Petras",
+      "pavarde": "Malionis",
+      "gimimo-data": "1972-07-13"
+    }
+  },
+  {
+    "@virtuve": "vakarietiska",
+    "pavadinimas": "Rofl Burger",
+    "darbuotoju-skaicius": "7",
+    "vidutinis-atlyginimas": {
+      "@valiuta": "Eur",
+      "#text": "856.2"
+    },
+    "ikurtas": "2011-01-07",
+    "vadovas": {
+      "@lytis": "m",
+      "vardas": "Marija",
+      "pavarde": "Barkienė",
+      "gimimo-data": "1977-06-12"
+    }
+  },
+  {
+    "@virtuve": "lietuviska",
+    "pavadinimas": "Vėdarėlis",
+    "darbuotoju-skaicius": "17",
+    "vidutinis-atlyginimas": {
+      "@valiuta": "Lt",
+      "#text": "1540.18"
+    },
+    "ikurtas": "1993-05-18",
+    "vadovas": {
+      "@lytis": "v",
+      "vardas": "Jonas",
+      "pavarde": "Cepaitis",
+      "gimimo-data": "1943-10-14"
+    }
+  },
+  {
+    "@virtuve": "latviska",
+    "pavadinimas": "Lab Dien",
+    "darbuotoju-skaicius": "105",
+    "vidutinis-atlyginimas": {
+      "@valiuta": "Ls",
+      "#text": "458.56"
+    },
+    "ikurtas": "1999-08-23",
+    "vadovas": {
+      "@lytis": "m",
+      "vardas": "Anna",
+      "pavarde": "Seile",
+      "gimimo-data": "1956-09-15"
+    }
+  },
+  {
+    "@virtuve": "rusiska",
+    "pavadinimas": "Kapeika",
+    "darbuotoju-skaicius": "28",
+    "vidutinis-atlyginimas": {
+      "@valiuta": "rub",
+      "#text": "2255.45"
+    },
+    "ikurtas": "2005-04-14",
+    "vadovas": {
+      "@lytis": "v",
+      "vardas": "Anton",
+      "pavarde": "Kuznetsov",
+      "gimimo-data": "1990-03-14"
+    }
+  }
+]
