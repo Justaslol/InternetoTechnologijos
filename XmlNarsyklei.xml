@@ -1,0 +1,62 @@
+<restoranu-tinklas>
+	<cr:restoranas xmlns:cr="cr" virtuve="rytietiska">
+		<cr:pavadinimas>Bambuchong</cr:pavadinimas>
+		<cr:darbuotoju-skaicius>58</cr:darbuotoju-skaicius>
+		<cr:vidutinis-atlyginimas valiuta="eur">756.8</cr:vidutinis-atlyginimas>
+		<cr:ikurtas>2008-10-03</cr:ikurtas>
+		<cr:vadovas lytis="v">
+			<cr:vardas>Petras</cr:vardas>
+			<cr:pavarde>Malionis</cr:pavarde>
+			<cr:gimimo-data>1972-07-13</cr:gimimo-data>
+		</cr:vadovas>
+	</cr:restoranas>
+	
+	<restoranas virtuve="vakarietiska">
+		<pavadinimas>Rofl Burger</pavadinimas>
+		<darbuotoju-skaicius>7</darbuotoju-skaicius>
+		<vidutinis-atlyginimas valiuta="Eur">856.2</vidutinis-atlyginimas>
+		<ikurtas>2011-01-07</ikurtas>
+		<vadovas lytis="m">
+			<vardas>Marija</vardas>
+			<pavarde>Barkienė</pavarde>
+			<gimimo-data>1977-06-12</gimimo-data>
+		</vadovas>
+	</restoranas>
+
+<restoranas virtuve="lietuviska">
+		<pavadinimas>Vėdarėlis</pavadinimas>
+		<darbuotoju-skaicius>17</darbuotoju-skaicius>
+		<vidutinis-atlyginimas valiuta="Lt">1540.18</vidutinis-atlyginimas>
+		<ikurtas>1993-05-18</ikurtas>
+		<vadovas lytis="v">
+			<vardas>Jonas</vardas>
+			<pavarde>Cepaitis</pavarde>
+			<gimimo-data>1943-10-14</gimimo-data>
+		</vadovas>
+	</restoranas>
+
+<restoranas virtuve="latviska">
+		<pavadinimas>Lab Dien</pavadinimas>
+		<darbuotoju-skaicius>105</darbuotoju-skaicius>
+		<vidutinis-atlyginimas valiuta="Ls">458.56</vidutinis-atlyginimas>
+		<ikurtas>1999-08-23</ikurtas>
+		<vadovas lytis="m">
+			<vardas>Anna</vardas>
+			<pavarde>Seile</pavarde>
+			<gimimo-data>1956-09-15</gimimo-data>
+		</vadovas>
+	</restoranas>
+
+<restoranas virtuve="rusiska">
+		<pavadinimas>Kapeika</pavadinimas>
+		<darbuotoju-skaicius>28</darbuotoju-skaicius>
+		<vidutinis-atlyginimas valiuta="rub">2255.45</vidutinis-atlyginimas>
+		<ikurtas>2005-04-14</ikurtas>
+		<vadovas lytis="v">
+			<vardas>Anton</vardas>
+			<pavarde>Kuznetsov</pavarde>
+			<gimimo-data>1990-03-14</gimimo-data>
+		</vadovas>
+	</restoranas>
+
+</restoranu-tinklas>

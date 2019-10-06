@@ -1,0 +1,10 @@
+1.
+/restoranu-tinklas/restoranas[1]/ancestor::*
+/restoranu-tinklas/restoranas[1]/descendant::text()
+/restoranu-tinklas/restoranas[1]/following-sibling::restoranas[3]
+/restoranu-tinklas/restoranas[1]/preceding-sibling::*
+/restoranu-tinklas/restoranas[1]/preceding::text()
+/restoranu-tinklas/restoranas[1]/attribute::*
+
+2.
+
