@@ -7,7 +7,7 @@
 	<cr:restoranas xmlns:cr="https://www.fooda.com/restaurant-network/chineese" virtuve="rytietiska">
 		<cr:pavadinimas>Bambuchong</cr:pavadinimas>
 		<cr:darbuotoju-skaicius>58</cr:darbuotoju-skaicius>
-		<cr:vidutinis-atlyginimas valiuta="eur">756.8</cr:vidutinis-atlyginimas>
+		<cr:vidutinis-atlyginimas valiuta="Eur">756.8</cr:vidutinis-atlyginimas>
 		<cr:ikurtas>2008-10-03</cr:ikurtas>
 		<cr:vadovas lytis="v">
 			<cr:vardas>Petras</cr:vardas>
