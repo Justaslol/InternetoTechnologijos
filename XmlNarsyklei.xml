@@ -1,15 +1,15 @@
 <restoranu-tinklas>
-	<cr:restoranas xmlns:cr="cr" virtuve="rytietiska">
-		<cr:pavadinimas>Bambuchong</cr:pavadinimas>
-		<cr:darbuotoju-skaicius>58</cr:darbuotoju-skaicius>
-		<cr:vidutinis-atlyginimas valiuta="Eur">756.8</cr:vidutinis-atlyginimas>
-		<cr:ikurtas>2008-10-03</cr:ikurtas>
-		<cr:vadovas lytis="v">
-			<cr:vardas>Petras</cr:vardas>
-			<cr:pavarde>Malionis</cr:pavarde>
-			<cr:gimimo-data>1972-07-13</cr:gimimo-data>
-		</cr:vadovas>
-	</cr:restoranas>
+	<restoranas virtuve="rytietiska">
+		<pavadinimas>Bambuchong</pavadinimas>
+		<darbuotoju-skaicius>58</darbuotoju-skaicius>
+		<vidutinis-atlyginimas valiuta="Eur">756.8</vidutinis-atlyginimas>
+		<ikurtas>2008-10-03</ikurtas>
+		<vadovas lytis="v">
+			<vardas>Petras</vardas>
+			<pavarde>Malionis</pavarde>
+			<gimimo-data>1972-07-13</gimimo-data>
+		</vadovas>
+	</restoranas>
 	
 	<restoranas virtuve="vakarietiska">
 		<pavadinimas>Rofl Burger</pavadinimas>
