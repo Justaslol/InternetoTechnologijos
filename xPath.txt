@@ -1,4 +1,5 @@
-1.
+1. Pasirinkti savo XML dokumente vieną žymę (turinčią bent vieną protėvį, ir bent vieną anūką), parašyti XPath kelią, unikaliai nueinantį prie tos žymės, ir prie to kelio prirašyti dar vieną žingsnį, naudojant šias ašis: ancestor, descendant, following-sibling, preceding-sibling, following, preceding, attribute (po vieną pavyzdį kiekvienai ašiai), mokėti paaiškinti rezultatą
+
 /restoranu-tinklas/restoranas[1]/ancestor::*
 /restoranu-tinklas/restoranas[1]/descendant::text()
 /restoranu-tinklas/restoranas[1]/following-sibling::restoranas[3]
@@ -6,5 +7,31 @@
 /restoranu-tinklas/restoranas[1]/preceding::text()
 /restoranu-tinklas/restoranas[1]/attribute::*
 
-2.
+2.Parašyti XPath kelią su predikatu, kurio viduje yra panaudotas XPath kelias (pvz.: rasti visas žymes A, kurių atributas x turi tokią pačią reikšmę kaip penktos dokumente žymės B atributas y; čia A, B, x, y pakeiskite į savo dokumento žymes/atributus), paaiškinti predikato veikimo principą
 
+/descendant::restoranas[vidutinis-atlyginimas/text() > 800]/attribute::*
+
+3.Funkcijas count() ir sum() (pvz., suskaičiuoti, kiek yra tam tikrų žymių/atributų, susumuoti tam tikrų žymių turinį), gebėti paaiškinti, ką ir kodėl grąžina išraiška sum(//*)šiam XML dokumentui: <a><b>2</b><c>3</c></a> (dėstytojas pakeis XML dokumentą)
+
+sum(//restoranas/darbuotoju-skaicius)
+count(/descendant::restoranas[vidutinis-atlyginimas/text() > 800])
+
+4.Operacijas <, =, + su skirtingų tipų operandais, ir paaiškinti, kaip apliekamas automatinis tipų konvertavimas (pvz. mokėti paaiškinti, kaip apskaičiuojamas išraiškos 5 < "kuku" rezultatas).
+
+/descendant::restoranas[vidutinis-atlyginimas/text() > 800]
+/descendant::restoranas[attribute::* = "latviska"]/pavadinimas/text()
+
+5.Reikia parašyti trijų žingsnių XPath išraišką (turi būti naudojamas bent vienas predikatas ir dvi skirtingos ašys) ir į atsiskaitymą atsinešti nupieštas aibes, kurios sukuriamos kiekvieno žingsnio apdorojimo rezultate
+
+/descendant::restoranas[attribute::* = "lietuviska"]/following-sibling::*/node()/text()
+
+6. parašyti išraišką, su operatoriumi = arba != lyginančią:
+
+    6.1. /descendant::restoranas != 5
+    6.2. /descendant::restoranas/node()/text() = "Bambuchong"
+    6.3. /descendant::restoranas/vidutinis-atlyginimas/text() = true()
+    6.4. /descendant::restoranas/vidutinis-atlyginimas != /descendant::restoranas/ikurtas
+
+7.parašyti išraišką, su operatoriais <, > lyginančią dvi aibes ir mokėti paaiškinti atliekamus automatinius tipų konvertavimus
+
+//following-sibling::restoranas[3]/vidutinis-atlyginimas/text() > //preceding-sibling::restoranas[3]/vidutinis-atlyginimas/text()
