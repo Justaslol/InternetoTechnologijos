@@ -1,0 +1,85 @@
+<xs:schema  targetNamespace="https://www.fooda.com/restaurant-network/chineese" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:element name="restoranas" type="chin:restoranasType" xmlns:chin="https://www.fooda.com/restaurant-network/chineese">  //9
+    <xs:key name="PavadinimoRibojimas">
+        <xs:selector xpath="/"/>
+        <xs:field xpath="pavadinimas"/>
+    </xs:key>
+  </xs:element>
+  <xs:element name="kavine" type="chin:kavineType" xmlns:chin="https://www.fooda.com/restaurant-network/chineese"/>
+  <xs:element name="baras" type="chin:barasType" xmlns:chin="https://www.fooda.com/restaurant-network/chineese"/>
+  <xs:element type="xs:string" name="darbo-laikas">
+  <xs:complexType name="vidutinis-atlyginimasType">
+    <xs:simpleContent>
+      <xs:extension base="xs:float">
+        <xs:attribute type="xs:string" name="valiuta"/>
+      </xs:extension>
+    </xs:simpleContent>
+  </xs:complexType>
+  <xs:complexType name="vadovasType">
+    <xs:sequence>
+      <xs:element type="xs:string" name="vardas">
+        <xs:complexType name="vardasType">
+          <simpleContent>
+            <xs:restriction base="pavadinimasType">                 // 3
+              <xs:maxLength value="15"/>
+            </xs:restriction>
+          </simpleContent>
+        </xs:complexType>
+      </xs:element>
+      <xs:element type="xs:string" name="pavarde">
+      <xs:complexType name="pavardeType">
+          <simpleContent>
+            <xs:extension base="pavadinimasType">                 // 3
+              <xs:attribute name="tautybe" type="xs:string"/>
+            </xs:restriction>
+          </simpleContent>
+        </xs:complexType>
+      </xs:element>
+      <xs:element type="xs:date" name="gimimo-data"/>
+    </xs:sequence>
+    <xs:attribute type="xs:string" name="lytis"/>
+  </xs:complexType>
+  <xs:complexType name="restoranasType">
+    <xs:sequence>
+      <xs:element type="xs:string" name="pavadinimas">
+      <xs: keyref name="PavadinimoRaktas" refer="PavadinimoRibojimas">  //8
+        <xs:selector xpath="/"/>
+        <xs:field xpath="/"/>
+      </xs:keyref>
+        <xs:SimpleType name="pavadinimasType">                       // 1
+            <xs: restriction base="xs:string">
+                <xs:pattern value="[A-Z]([a-zA-Z])*" />                 // 5
+            </xs: restriction>
+        </xs:SimpleType>
+      </xs:element>
+      <xs:element type="xs:int" name="darbuotoju-skaicius">
+        <xs:simpleType name="darbuotoju-skaicius">                          // 2
+          <xs:list itemType="xs:integer" />
+        </xs:simpleType>
+      </xs:element>
+      <xs:element type="chin:vidutinis-atlyginimasType" name="vidutinis-atlyginimas" xmlns:chin="https://www.fooda.com/restaurant-network/chineese">
+      </xs:element>
+      <xs:element type="xs:date" name="ikurtas"/>
+      <xs:element type="chin:vadovasType" name="vadovas" xmlns:chin="https://www.fooda.com/restaurant-network/chineese"/>
+    </xs:sequence>
+    <xs:attribute type="xs:string" name="virtuve"/>
+  </xs:complexType>
+  <xs:complexType name="kavineType">
+    <xs:complexContent>
+        <xs:extension base="restoranasType">
+            <xs:sequence>
+                <xs:element ref="darbo-laikas" minOccurs="0"/>              // 4
+            </xs:sequence>
+        </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:complexType name="barasType" mixed="true">                // 6
+    <xs:complexContent>
+        <xs:restriction base="restoranasType">
+            <xs:choice>                                         // 7
+                <xs:element ref="pavadinimas"/>              // 4
+            </xs:choice>
+        </xs:restriction>
+    </xs:complexContent>
+  </xs:complexType>
+</xs:schema>
