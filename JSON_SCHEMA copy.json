@@ -1,0 +1,150 @@
+{
+     "definitions": {},
+     "$schema": "http://json-schema.org/draft-07/schema#",
+     "$id": "https://www.fooda.com/restaurant-network/chineese",
+     "type": "array",
+     "items": {
+       "$id": "#/items",
+       "type": "object",
+      "title": "The Items Schema",
+      "required": [                           // 3
+        "@virtuve",
+        "pavadinimas",
+        "darbuotoju-skaicius",
+        "vidutinis-atlyginimas",
+        "ikurtas",
+        "vadovas"
+      ],
+      "properties": {
+        "@virtuve": {
+          "$id": "#/items/properties/@virtuve",
+          "type": "string",
+          "default": "",
+          "enum": ["rytietiska", "vakarietiska", "lietuviska", "latviska", "rusiska"]     // 2
+        },
+        "pavadinimas": {
+          "$id": "#/items/properties/pavadinimas",
+          "type": "string",
+            "maxLength": 40,                    // 3
+          "default": "",
+          "examples": [
+            "Bambuchong"
+          ],
+          "pattern": "^[A-Z]"                     // 4
+        },
+        "darbuotoju-skaicius": {
+          "$id": "#/items/properties/darbuotoju-skaicius",
+          "type": "integer",
+            "minimum": 1,                       // 3
+          "default": "",
+          "examples": [
+            "58"
+          ]
+        },
+        "vidutinis-atlyginimas": {
+          "$id": "#/items/properties/vidutinis-atlyginimas",
+          "type": "object",
+          "required": [
+            "@valiuta",
+            "#text"
+          ],
+          "properties": {
+            "@valiuta": {
+              "$id": "#/items/properties/vidutinis-atlyginimas/properties/@valiuta",
+              "type": "string",
+                "maxLength": 5,                 // 3
+              "default": "",
+              "examples": [
+                "eur"
+              ]
+            },
+            "#text": {
+              "$id": "#/items/properties/vidutinis-atlyginimas/properties/#text",
+              "type": "number",
+              "default": "",
+              "examples": [
+                "756.8"
+              ],
+              "pattern": "([0-9]*.[0-9])"               // 4
+            }
+          }
+        },
+        "ikurtas": {
+          "$id": "#/items/properties/ikurtas",
+          "type": "string",
+          "default": "",
+          "examples": [
+            "2008-10-03"
+          ],
+          "pattern": "^(.*)$"
+        },
+        "meneidzeris": {
+          "allOf": [                                      // 5
+            { "$ref": "#definitions/vadovas" },           // 6
+            {
+              "properties": {
+                "komandosDydis": {
+                  "type": "integer",
+                  "maximum": 20
+                }
+              }
+            }
+          ]
+        },
+        "definitions":{
+        "vadovas": {
+          "$id": "#/items/properties/vadovas",
+          "type": "object",
+          "required": [
+            "@lytis",
+            "vardas",
+            "pavarde",
+            "gimimo-data"
+         ],
+         "properties": {
+           "@lytis": {
+             "$id": "#/items/properties/vadovas/properties/@lytis",
+             "type": "string",
+             "default": "",
+             "examples": [
+               "v"
+             ],
+             "pattern": "^(.*)$"
+           },
+           "vardas": {
+             "$id": "#/items/properties/vadovas/properties/vardas",
+             "type": "string",
+             "default": "",
+             "examples": [
+               "Petras"
+             ],
+             "pattern": "^(.*)$"
+           },
+           "pavarde": {
+             "$id": "#/items/properties/vadovas/properties/pavarde",
+             "type": "string",
+             "default": "",
+             "examples": [
+               "Malionis"
+             ],
+             "pattern": "^(.*)$"
+           },
+           "gimimo-data": {
+             "$id": "#/items/properties/vadovas/properties/gimimo-data",
+             "type": "string",
+             "anyOf": [                                  // 5
+                { "type": "string", "maxLength": 10 },
+                { "type": "number", "minimum": 8 }
+             ],
+             "default": "",
+             "examples": [
+               "1972-07-13"
+             ],
+             "pattern": "^(.*)$"
+           }
+         }
+       }
+    }
+     }
+   }
+ }
