@@ -1,0 +1,79 @@
+body {
+  background: #f4f4f4;
+  color: rgb(80, 55, 55);
+
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 16px;
+  font-weight: normal;
+  /*same as above*/
+  font: normal, 16px, Arial, Helvetica, sans-serif;
+
+  line-height: 1.6em;
+  margin: 0;
+}
+aside {
+  justify-items: stretch;
+}
+
+/* Vaiko selektorius */
+aside > section {
+  margin: auto;
+  background-color: #91a1b1;
+  justify-items: stretch;
+}
+
+/* Ipedinio selektorius */
+aside table {
+  margin: auto;
+  border: solid !important;
+}
+
+/* Inherit */
+aside table * {
+  border: inherit;
+}
+
+a {
+  text-decoration: none;
+  color: #000;
+}
+
+a:hover {
+  color: #444;
+  font-size: 17px;
+}
+
+a:active {
+  color: green;
+}
+
+/* Atributo selektorius */
+select[multiple] {
+  background: #ddd;
+  padding: 10px;
+}
+
+#red-select {
+  background: red;
+}
+#yellow-select {
+  background: yellow;
+}
+#green-select {
+  background: green;
+}
+#blue-select {
+  background: blue;
+}
+
+@media (max-width: 600px) {
+  aside {
+    display: none;
+  }
+  .select {
+    display: none;
+  }
+  img {
+    width: 100%;
+  }
+}
