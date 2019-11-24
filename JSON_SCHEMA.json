@@ -1,146 +1,114 @@
-1 {
-  2   "definitions": {},
-  3   "$schema": "http://json-schema.org/draft-07/schema#",
-  4   "$id": "http://example.com/root.json",
-  5   "type": "array",
-  6   "title": "The Root Schema",
-  7   "items": {
-  8     "$id": "#/items",
-  9     "type": "object",
- 10     "title": "The Items Schema",
- 11     "required": [
- 12       "@virtuve",
- 13       "pavadinimas",
- 14       "darbuotoju-skaicius",
- 15       "vidutinis-atlyginimas",
- 16       "ikurtas",
- 17       "vadovas"
- 18     ],
- 19     "properties": {
- 20       "@virtuve": {
- 21         "$id": "#/items/properties/@virtuve",
- 22         "type": "string",
- 23         "title": "The @virtuve Schema",
- 24         "default": "",
- 25         "examples": [
- 26           "rytietiska"
- 27         ],
- 28         "pattern": "^(.*)$"
- 29       },
- 30       "pavadinimas": {
- 31         "$id": "#/items/properties/pavadinimas",
- 32         "type": "string",
- 33         "title": "The Pavadinimas Schema",
- 34         "default": "",
- 35         "examples": [
- 36           "Bambuchong"
- 37         ],
- 38         "pattern": "^(.*)$"
- 39       },
- 40       "darbuotoju-skaicius": {
- 41         "$id": "#/items/properties/darbuotoju-skaicius",
- 42         "type": "string",
- 43         "title": "The Darbuotoju-skaicius Schema",
- 44         "default": "",
- 45         "examples": [
- 46           "58"
- 47         ],
- 48         "pattern": "^(.*)$"
- 49       },
- 50       "vidutinis-atlyginimas": {
- 51         "$id": "#/items/properties/vidutinis-atlyginimas",
- 52         "type": "object",
- 53         "title": "The Vidutinis-atlyginimas Schema",
- 54         "required": [
- 55           "@valiuta",
- 56           "#text"
- 57         ],
- 58         "properties": {
- 59           "@valiuta": {
- 60             "$id": "#/items/properties/vidutinis-atlyginimas/properties/@valiuta",
- 61             "type": "string",
- 62             "title": "The @valiuta Schema",
- 63             "default": "",
- 64             "examples": [
- 65               "eur"
- 66             ],
- 67             "pattern": "^(.*)$"
- 68           },
- 69           "#text": {
- 70             "$id": "#/items/properties/vidutinis-atlyginimas/properties/#text",
- 71             "type": "string",
- 72             "title": "The #text Schema",
- 73             "default": "",
- 74             "examples": [
- 75               "756.8"
- 76             ],
- 77             "pattern": "^(.*)$"
- 78           }
- 79         }
- 80       },
- 81       "ikurtas": {
- 82         "$id": "#/items/properties/ikurtas",
- 83         "type": "string",
- 84         "title": "The Ikurtas Schema",
- 85         "default": "",
- 86         "examples": [
- 87           "2008-10-03"
- 88         ],
- 89         "pattern": "^(.*)$"
- 90       },
- 91       "vadovas": {
- 92         "$id": "#/items/properties/vadovas",
- 93         "type": "object",
- 94         "title": "The Vadovas Schema",
- 95         "required": [
- 96           "@lytis",
- 97           "vardas",
- 98           "pavarde",
- 99           "gimimo-data"
-100         ],
-101         "properties": {
-102           "@lytis": {
-103             "$id": "#/items/properties/vadovas/properties/@lytis",
-104             "type": "string",
-105             "title": "The @lytis Schema",
-106             "default": "",
-107             "examples": [
-108               "v"
-109             ],
-110             "pattern": "^(.*)$"
-111           },
-112           "vardas": {
-113             "$id": "#/items/properties/vadovas/properties/vardas",
-114             "type": "string",
-115             "title": "The Vardas Schema",
-116             "default": "",
-117             "examples": [
-118               "Petras"
-119             ],
-120             "pattern": "^(.*)$"
-121           },
-122           "pavarde": {
-123             "$id": "#/items/properties/vadovas/properties/pavarde",
-124             "type": "string",
-125             "title": "The Pavarde Schema",
-126             "default": "",
-127             "examples": [
-128               "Malionis"
-129             ],
-130             "pattern": "^(.*)$"
-131           },
-132           "gimimo-data": {
-133             "$id": "#/items/properties/vadovas/properties/gimimo-data",
-134             "type": "string",
-135             "title": "The Gimimo-data Schema",
-136             "default": "",
-137             "examples": [
-138               "1972-07-13"
-139             ],
-140             "pattern": "^(.*)$"
-141           }
-142         }
-143       }
-144     }
-145   }
-146 }
+{
+	"definitions": {},
+	"$schema": "http://json-schema.org/draft-07/schema#",
+	"$id": "https://www.fooda.com/restaurant-network/chineese",
+	"type": "array",
+	"items": {
+		"$id": "#/items",
+		"type": "object",
+		"title": "The Items Schema",
+		"required": [ "@virtuve", "pavadinimas", "darbuotoju-skaicius", "vidutinis-atlyginimas", "ikurtas", "vadovas" ],
+		"properties": {
+			"@virtuve": {
+				"$id": "#/items/properties/@virtuve",
+				"type": "string",
+				"default": "",
+				"enum": [ "rytietiska", "vakarietiska", "lietuviska", "latviska", "rusiska" ]
+			},
+			"pavadinimas": {
+				"$id": "#/items/properties/pavadinimas",
+				"type": "string",
+				"maxLength": 40,
+				"default": "",
+				"examples": [ "Bambuchong" ],
+				"pattern": "^[A-Z]"
+			},
+			"darbuotoju-skaicius": {
+				"$id": "#/items/properties/darbuotoju-skaicius",
+				"type": "integer",
+				"minimum": 1,
+				"default": "",
+				"examples": [ "58" ]
+			},
+			"vidutinis-atlyginimas": {
+				"$id": "#/items/properties/vidutinis-atlyginimas",
+				"type": "object",
+				"required": [ "@valiuta", "#text" ],
+				"properties": {
+					"@valiuta": {
+						"$id": "#/items/properties/vidutinis-atlyginimas/properties/@valiuta",
+						"type": "string",
+						"maxLength": 5,
+						"default": "",
+						"examples": [ "eur" ]
+					},
+					"#text": {
+						"$id": "#/items/properties/vidutinis-atlyginimas/properties/#text",
+						"type": "number",
+						"default": "",
+						"examples": [ "756.8" ],
+						"pattern": "([0-9]*.[0-9])"
+					}
+				}
+			},
+			"ikurtas": {
+				"$id": "#/items/properties/ikurtas",
+				"type": "string",
+				"default": "",
+				"examples": [ "2008-10-03" ],
+				"pattern": "^(.*)$"
+			},
+			"meneidzeris": {
+				"allOf": [
+					{ "$ref": "#definitions/vadovas" },
+					{
+						"properties": {
+							"komandosDydis": {
+								"type": "integer",
+								"maximum": 20
+							}
+						}
+					}
+				]
+			},
+			"definitions": {
+				"vadovas": {
+					"$id": "#/items/properties/vadovas",
+					"type": "object",
+					"required": [ "@lytis", "vardas", "pavarde", "gimimo-data" ],
+					"properties": {
+						"@lytis": {
+							"$id": "#/items/properties/vadovas/properties/@lytis",
+							"type": "string",
+							"default": "",
+							"examples": [ "v" ],
+							"pattern": "^(.*)$"
+						},
+						"vardas": {
+							"$id": "#/items/properties/vadovas/properties/vardas",
+							"type": "string",
+							"default": "",
+							"examples": [ "Petras" ],
+							"pattern": "^(.*)$"
+						},
+						"pavarde": {
+							"$id": "#/items/properties/vadovas/properties/pavarde",
+							"type": "string",
+							"default": "",
+							"examples": [ "Malionis" ],
+							"pattern": "^(.*)$"
+						},
+						"gimimo-data": {
+							"$id": "#/items/properties/vadovas/properties/gimimo-data",
+							"type": "string",
+							"anyOf": [ { "type": "string", "maxLength": 10 }, { "type": "number", "minimum": 8 } ],
+							"default": "",
+							"examples": [ "1972-07-13" ],
+							"pattern": "^(.*)$"
+						}
+					}
+				}
+			}
+		}
+	}
+}
