@@ -5,13 +5,15 @@
     <title>4 užduotis</title>
     <link href="css/styles.css" rel="stylesheet" />
   </head>
+  <script src="script.js"></script>
+  <script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
   <body>
     <header>
       <h1>Tai yra ketvirtoji užduotis</h1>
     </header>
     <section>
       <h2>Šiek tiek straipsnių</h2>
-      <article>
+      <article id="artur">
         <header>
           <h3>Straipsnis #1</h3>
         </header>
@@ -19,24 +21,37 @@
           src="https://cleus.co/wp-content/uploads/2019/03/programmer-in-rich-nation.jpg"
           alt="Fotografija"
         />
-        <p>Tai pirmas straipsnis.</p>
+        <p>
+          Tai yra Arturas. Matomas tik tuomet, kai lentelėje yra vardas Arturas
+        </p>
       </article>
       <article id="antras-str">
         <header>
           <h3>Straipsnis #2</h3>
         </header>
-        <p>Šis straipsnis rodomas tik tuomet, kai formoje įvesta</p>
+        <p id="straipsnis">Šis straipsnis rodomas visuomet</p>
       </article>
     </section>
     <section>
       <h2>Forma</h2>
-      <form name="forma" action="rezultatas.html" method="post">
+      <form name="forma" method="post" onsubmit="return validateForm()">
         Vardas: <input type="text" name="vardas" /><br />
         Slaptažodis: <input type="password" name="slaptazodis" /><br />
-        Pašto adresas: <input type="text" name="email" /><br />
-        <label> <input type="radio" name="lytis" value="V" /> vyras </label>
+        Amžius: <input type="text" name="age" required /><br />
+        <label for="start">Data: </label>
         <br />
-        <label> <input type="radio" name="lytis" value="M" /> moteris </label>
+        Metai: <input type="text" name="year" /><br />
+        Mėnuo: <input type="text" name="month" /><br />
+        Diena: <input type="text" name="day" /><br />
+        <!-- <input
+          type="date"
+          id="start"
+          name="date"
+          value="2019-12-16"
+          min="2019-01-01"
+          max="2019-12-31"
+          required
+        /> -->
         <br />
         <input type="submit" value="Siųsti" />
         <input type="reset" value="Išvalyti" />
@@ -45,40 +60,38 @@
     <aside>
       <section>
         <h2>Lentelė</h2>
-        <table>
+        <table id="lentele">
           <tr>
             <th colspan="3">Vartotojas</th>
           </tr>
           <tr>
             <th>Vardas</th>
-            <th>Kreditas</th>
-            <th>Debetas</th>
-          </tr>
-          <tr>
-            <td rowspan="2">Billas</td>
-            <td>562364</td>
-            <td>-4456</td>
-          </tr>
-          <tr>
-            <td>7849</td>
-            <td>-5646</td>
+            <th>Amžius</th>
+            <th>Data</th>
           </tr>
         </table>
       </section>
     </aside>
-
-    <section class="select">
-      <h2>Pasirinkite pasirinkimą</h2>
-      <select multiple size="4" name="manoMeniu">
-        <option id="red-select" selected value="r"
-          >Raudonas pasirinkimas</option
-        >
-        <option id="yellow-select" selected value="g"
-          >Geltonas pasirinkimas</option
-        >
-        <option id="green-select" value="z">Žalias pasirinkimas</option>
-        <option id="blue-select" value="m">Mėlynas pasirinkimas</option>
-      </select>
+    <hr />
+    <h2>4 Dalis Json</h2>
+    <form name="forma2" method="post" onsubmit="return submitJson()">
+      Vardas: <input type="text" name="vardas" /><br />
+      Email: <input type="text" name="email" /><br />
+      Miestas: <input type="text" name="city" required /><br />
+      <input type="submit" value="Siųsti" />
+    </form>
+    <section>
+      <h2>Json Lentelė</h2>
+      <table id="lentele2">
+        <tr>
+          <th colspan="3">Users</th>
+        </tr>
+        <tr>
+          <th>Name</th>
+          <th>Email</th>
+          <th>City</th>
+        </tr>
+      </table>
     </section>
     <footer>2019 &copy; Technologic</footer>
   </body>

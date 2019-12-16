@@ -18,13 +18,17 @@ aside > section {
 }
 
 /* Ipedinio selektorius */
-aside table {
+table {
   border: solid !important;
 }
 
 /* Inherit */
-aside table * {
+table * {
   border: inherit;
+}
+
+#straipsnis {
+  font-size: 16px;
 }
 
 a {
@@ -58,6 +62,10 @@ select[multiple] {
 }
 #blue-select {
   background: blue;
+}
+
+#artur {
+  display: none;
 }
 
 @media (max-width: 600px) {
